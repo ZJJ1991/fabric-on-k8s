@@ -36,23 +36,23 @@ spec:
               value: "false"
             - name: KAFKA_ADVERTISED_HOST_NAME
               value: "kafka1.fabric-zk-kafka"
-# ---
-# apiVersion: v1
-# kind: Service
-# metadata:
-#    namespace: fabric-zk-kafka
-#    name: kafka1
-# spec:
-#  selector:
-#    app: hyperledger
-#    role: kafka
-#    kafka-id: kafka1
-#  clusterIP: None
-#  ports:
-#    - name: kafka-port1
-#      protocol: TCP
-#      port: 9092
+---
+apiVersion: apps/v1
+kind: Service
+metadata:
+   namespace: fabric-zk-kafka
+   name: kafka1
+spec:
+ selector:
+   app: hyperledger
+   role: kafka
+   kafka-id: kafka1
+ clusterIP: None
+ ports:
+   - name: kafka-port1
+     protocol: TCP
+     port: 9092
 
-#    - name: kafka-port2
-#      protocol: TCP
-#      port: 9093
+   - name: kafka-port2
+     protocol: TCP
+     port: 9093
