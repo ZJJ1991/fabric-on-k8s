@@ -68,19 +68,19 @@ spec:
             # change this to current dir path
             path: /Users/hejunwei/k8s/fabric-on-k8s/
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  namespace: example-com
-  name: orderer0
-spec:
- selector:
-   app: hyperledger
-   role: orderer
-   org: orderer-org
-   orderer-id: orderer0
- clusterIP: None
- ports:
-   - name: listen-endpoint
-     protocol: TCP
-     port: 7050
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   namespace: example-com
+#   name: orderer0
+# spec:
+#  selector:
+#    app: hyperledger
+#    role: orderer
+#    org: orderer-org
+#    orderer-id: orderer0
+#  clusterIP: None
+#  ports:
+#    - name: listen-endpoint
+#      protocol: TCP
+#      port: 7050

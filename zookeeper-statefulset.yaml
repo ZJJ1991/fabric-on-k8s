@@ -40,7 +40,7 @@ spec:
                     sed -i "s/${HOSTNAME}\.[^:]*:/0.0.0.0:/g" /conf/zoo.cfg
                     echo $((${HOSTNAME##*-}+1)) > /data/myid
 ---
-apiVersion: v1
+apiVersion: apps/v1
 kind: Service
 metadata:
    namespace: fabric-zk-kafka

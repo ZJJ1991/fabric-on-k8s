@@ -140,7 +140,7 @@ spec:
          hostPath:
             path: /var/run
 ---
-apiVersion: v1
+apiVersion: apps/v1
 kind: Service
 metadata:
    namespace: org2-example-com
